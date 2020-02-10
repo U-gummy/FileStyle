@@ -356,16 +356,7 @@
             // console.log("c"+e);
             return false;
         });
-
-         
-        // $(document).keydown(function(){
-        //     var x = event.keyCode;
-        //     if (x == 16) { 
-        //         // alert ("You pressed the Escape key!");
-        //         console.log("keydown");
-        //     }
-        // })
-
+        /* 쉬프트 누르고 선택하는 이벤트 */
         var shiftFlag = false;
         var startIndex, endIndex;
         fn_keyEvent ();
@@ -394,18 +385,16 @@
                 $(this).attr("isFirst","true");
             }
 
-
         });
+        /* 쉬프트 눌렀는지 안눌렀는지 체크 함수 */
         function fn_keyEvent () {
             $(document).keydown(function(){
                 if (event.keyCode == 16) { 
                     shiftFlag = true;
-                    // console.log('shiftFlag: ', shiftFlag);
                 } else {}
             })
             $(document).keyup(function(){
                 shiftFlag = false;
-                // console.log('shiftFlag: ', shiftFlag);
             })
         }
 
